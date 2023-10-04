@@ -17,8 +17,28 @@ namespace BestRestaurants.Controllers
 
     public ActionResult Index()
     { // Database -> Restaurant Table -> For each Restaurant row, grab the information for it's associated Cuisine -> Return each Restaurant item and put it in a list
-      List<Restaurant> model = _db.Restaurants.Include(restaurant => restaurant.Cuisine).ToList();
+      // List<Restaurant> model = _db.Restaurants.Include(restaurant => restaurant.Cuisine).ToList();
+      List<Restaurant> model = _db.Restaurants.ToList();
       return View(model);
+    }
+
+    public ActionResult Create() 
+    {
+      return View();
+    }
+    
+    [HttpPost]
+    public ActionResult Create(Restaurant restaurant)
+    {
+      _db.Restaurants.Add(restaurant);
+      _db.SaveChanges();
+      return RedirectToAction("Index");
+    }
+
+    public ActionResult Details(int id)
+    {
+      Restaurant thisRestaurant = _db.Restaurants.FirstOrDefault(restaurant => restaurant.RestaurantId == id);
+      return View(thisRestaurant);
     }
   }
 }
