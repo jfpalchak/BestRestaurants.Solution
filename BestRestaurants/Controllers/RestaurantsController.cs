@@ -16,8 +16,9 @@ namespace BestRestaurants.Controllers
     }
 
     public ActionResult Index()
-    {
-      return View();
+    { // Database -> Restaurant Table -> For each Restaurant row, grab the information for it's associated Cuisine -> Return each Restaurant item and put it in a list
+      List<Restaurant> model = _db.Restaurants.Include(restaurant => restaurant.Cuisine).ToList();
+      return View(model);
     }
   }
 }
