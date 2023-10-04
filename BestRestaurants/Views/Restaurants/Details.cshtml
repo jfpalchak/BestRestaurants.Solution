@@ -3,11 +3,13 @@
 }
 
 @model BestRestaurants.Models.Restaurant;
+@using BestRestaurants.Models;
 
 <h2>Here are the details of @Model.Name restaurant</h2>
 <!-- look how siqq we are ??? -->
 <h4>@(Model.Accessible ? "Accessible" : "Not Accessible")</h4>
-<h4>@Model.City</h4>
-<h4>@Model.Capacity</h4>
+<h4>City: @Model.City</h4>
+<h4>Capacity: @Model.Capacity</h4>
 
+<h4>Cuisine: @Model.Cuisine.Type</h4>
 @* Display the Cuisine *@

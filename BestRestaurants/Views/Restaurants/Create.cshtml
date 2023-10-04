@@ -21,9 +21,11 @@
   <br/>
   @Html.RadioButtonFor(model => model.Accessible, true) @:Yes
   @Html.RadioButtonFor(model => model.Accessible, false) @:No
-
-  @* ADD OPTIONS FOR CUISINE! *@
-
+  <br/>
+  @Html.LabelFor(model => model.Cuisine)
+  <br/>
+  @Html.DropDownList("CuisineId")
+  <br/>
   <br><input type="submit" value="Add" class="btn btn-primary"/>
 }
 <br/>
