@@ -4,7 +4,7 @@ namespace BestRestaurants.Models
 {
   public class Cuisine 
   {
-    public string Name { get; set; }
+    public string Type { get; set; }
     // "other end" of navigation property
     public int CuisineId { get; set; }
 
