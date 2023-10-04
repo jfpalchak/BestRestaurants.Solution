@@ -11,6 +11,7 @@
 * ASP.NET Core MVC
 * Entity Framework Core
 * MySQL
+* MySQL Workbench
 
 ## Description
 
