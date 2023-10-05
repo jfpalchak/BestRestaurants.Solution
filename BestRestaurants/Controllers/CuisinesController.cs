@@ -1,4 +1,6 @@
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using BestRestaurants.Models;
 using System.Collections.Generic;
 using System.Linq;
@@ -32,6 +34,12 @@ namespace BestRestaurants.Controllers
       _db.Cuisines.Add(cuisine);
       _db.SaveChanges();
       return RedirectToAction("Index");
+    }
+
+    public ActionResult Details(int id)
+    {
+      Cuisine thisCuisine = _db.Cuisines.Include(cuisine => cuisine.Restaurants).FirstOrDefault(cuisine => cuisine.CuisineId == id);
+      return View(thisCuisine);
     }
   }
 }
