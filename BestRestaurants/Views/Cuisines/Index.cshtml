@@ -16,10 +16,10 @@ else
   <ul>
     @foreach (Cuisine cuisine in Model)
     {
-      <li>@Html.ActionLink($"{cuisine.Type}", "Details") </li>
+      <li>@Html.ActionLink($"{cuisine.Type}", "Details", new { id = cuisine.CuisineId }) </li>
     }
   </ul>
 }
 
-<p>@Html.ActionLink("Make a New Cuisine", "Create")</p>
+<p>@Html.ActionLink("Add a New Cuisine", "Create")</p>
 <p>@Html.ActionLink("Back to Home", "Index", "Home")</p>

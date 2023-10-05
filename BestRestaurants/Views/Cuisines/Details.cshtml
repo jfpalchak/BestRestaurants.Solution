@@ -1,3 +1,27 @@
 @{
   Layout = "_Layout";
 }
+
+@using BestRestaurants.Models;
+@model BestRestaurants.Models.Cuisine;
+
+<h2>Details for @Model.Type</h2>
+
+@if(Model.Restaurants.Count != 0)
+{
+  <h3>Here are all of the restaurants selling this cuisine:</h3>
+  <ul>
+    @foreach(Restaurant restaurant in Model.Restaurants)
+    {
+      <li><h4>@Html.ActionLink($"{restaurant.Name}", "Details", "Restaurants", new { id = restaurant.RestaurantId })</h4></li>
+    }
+  </ul>
+}
+else
+{
+  <h3>There are no known restaurants selling this cuisine.</h3>
+}
+
+<br />
+<p>@Html.ActionLink("Back to Cuisines", "Index")</p>
+<p>@Html.ActionLink("Back to Home", "Index", "Home")</p>

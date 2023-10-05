@@ -10,6 +10,11 @@
 <h4>@(Model.Accessible ? "Accessible" : "Not Accessible")</h4>
 <h4>City: @Model.City</h4>
 <h4>Capacity: @Model.Capacity</h4>
+@* /Cuisines/Details/{id} *@
+<h4>Cuisine: @Html.ActionLink($"{Model.Cuisine.Type}", "Details", "Cuisines", new { id = Model.Cuisine.CuisineId })</h4>
 
-<h4>Cuisine: @Model.Cuisine.Type</h4>
-@* Display the Cuisine *@
+@* Add Review? *@
+
+<br/>
+<p>@Html.ActionLink("Back to Restaurants", "Index")</p>
+<p>@Html.ActionLink("Back to Home", "Index", "Home")</p>
