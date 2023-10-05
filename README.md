@@ -17,6 +17,8 @@
 
 {DESCRIPTION}
 
+<img src="https://github.com/jfpalchak/BestRestaurants.Solution/blob/assets/schema-draw.png" />
+
 ## Setup/Installation Requirements
 
 #### Install Tools
