@@ -15,9 +15,26 @@
 
 ## Description
 
-{DESCRIPTION}
+A simple website where users can add their favorite restaurants based on the type of cuisine they offer.
 
+Schema diagram:
 <img src="https://github.com/jfpalchak/BestRestaurants.Solution/blob/assets/schema-draw.png" />
+
+Available Routes:
+```
+https://localhost:5001
+https://localhost:5001/Cuisines
+https://localhost:5001/Cuisines/Create
+https://localhost:5001/Cuisines/Details/{id}
+https://localhost:5001/Cuisines/Edit/{id}
+https://localhost:5001/Cuisines/Delete/{id}
+https://localhost:5001/Restaurants
+https://localhost:5001/Restaurants/Create
+https://localhost:5001/Restaurants/Details/{id}
+https://localhost:5001/Restaurants/Edit/{id}
+https://localhost:5001/Restaurants/Delete/{id}
+
+```
 
 ## Setup/Installation Requirements
 
