@@ -16,5 +16,7 @@
 @* Add Review? *@
 
 <br/>
+<p>@Html.ActionLink("Edit Restaurant", "Edit", new {id = Model.RestaurantId })</p>
+<p>@Html.ActionLink("Delete Restaurant", "Delete", new {id = Model.RestaurantId })</p>
 <p>@Html.ActionLink("Back to Restaurants", "Index")</p>
 <p>@Html.ActionLink("Back to Home", "Index", "Home")</p>
