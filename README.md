@@ -15,7 +15,7 @@
 
 ## Description
 
-A simple website where users can add their favorite restaurants based on the type of cuisine they offer.
+A simple website where users can add their favorite restaurants based on the type of cuisine they offer. Users can search for restaurants by the cuisine they offer, or otherwise search through a list of all available restaurants.
 
 Schema diagram:
 <img src="https://github.com/jfpalchak/BestRestaurants.Solution/blob/assets/schema-draw.png" />
